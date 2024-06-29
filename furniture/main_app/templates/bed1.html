@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solid wood single bed</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+      }
+
+      .card {
+        width: 600px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .price {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .discount {
+        color: #777;
+        font-size: 14px;
+      }
+
+      .dates {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .date-input {
+        width: 150px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .button,.btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #0069d9;
+      }
+
+      .delivery {
+        margin-top: 20px;
+        color: #777;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ZqwA0c9tutapTLmNCHdm3gHaIJ%26pid%3DApi&f=1&ipt=f5a17c5011bed03ae5107bcf33bcef346a9c2db8460ac06b116fd5f117e9bcef&ipo=images"
+        />
+        <br>
+        <form method="post" >
+          {% csrf_token %}
+        <h2 id="name">Solid wood single bed</h2>
+	
+        <div class="price">250</div>
+        <div class=""></div>
+        <div class="dates">
+          <div>
+            <label for="from">From:</label>
+            <input type="date" id="from" class="date-input" />
+          </div>
+          <div>
+            <label for="until">Until:</label>
+            <input type="date" id="until" class="date-input" />
+          </div>
+          <button class="button">Submit</button>
+        </form>
+        </div>
+        <button class="btn">Add to Cart</button>
+        <div class="delivery">"Get it by our fastest delivery service"</div>
+        <div class="delivery">
+                  </div>
+        <div class="delivery"></div>
+      </div>
+    </div>
+    <script>
+      var price = document.querySelector(".price h2").textContent
+      console.log(price);
+      var from;
+      var submit = document.querySelector(".button")
+      let date1;
+     
+      var name = document.getElementById("#name")
+      console.log(name);
+	
+     
+      console.log(date1);
+      submit.addEventListener("click",function(){
+        from = document.getElementById('from').value;
+        until = document.getElementById('until').value;
+        date1 = new Date(from)
+        date2 = new Date(until)
+
+        
+        let time_diff = date2.getTime() - date1.getTime();
+        let day_diff = time_diff/ (1000 * 60 * 60 * 24);
+        console.log(day_diff)
+      })
+  
+    </script>
+  </body>
+</html>

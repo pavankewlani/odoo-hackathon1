@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+      }
+
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      header nav li {
+        margin-right: 20px;
+      }
+
+      header nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .hero {
+        background-image: url("hero.jpg");
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .featured-products {
+        padding: 2em;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .product-card {
+        background-color: #fff;
+        padding: 1em;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2vh;
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .product-card h3 {
+        font-size: 18px;
+        margin-top: 0;
+      }
+
+      .product-card p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .product-card button {
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: white;
+        border: solid #fee192;
+        transition: all ease 0.5s;
+      }
+
+      .product-card button:hover {
+        background-color: #fee192;
+        box-shadow: 2px 2px 0px black;
+      }
+      nav {
+        padding: 10px 20px;
+        margin: 2vh;
+      }
+
+      nav i {
+        font-size: 2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+      <nav>
+        <i
+          class="ri-arrow-left-line"
+        ><a href="{% url 'home_page' %}">Back</a></i>
+      </nav>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F65974099-dee0-4ea8-bf2c-e6e07458b2d0_4.319ff84c24b40ec51388770850f176e9.jpeg&f=1&nofb=1&ipt=ca2a29c18c51e3b089ef1d2d657809ae51b865c86f2b70baf6f0538ccefa3f00&ipo=images"
+            alt="Product 1"
+            height="10"
+          />
+          <h3>Living Room Upholstered Reclining Sofa</h3>
+          <p>Starting from 350/day</p>
+          <button type="submit"> <a href="{% url 'sofa1_page' %}">Rent </a></button>
+
+        </div>
+        <div class="product-card">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.primeclassicdesign.com%2Fimages%2Fleather-living-room-sets%2Fultra-soft-reclining-sofa-loveseat-in-italian-premium-leather-alpa-dony.jpg&f=1&nofb=1&ipt=ec14ca8cb61d997235e8ff0466b839ff2c135e0d078913a6a97a89fe671daa60&ipo=images"
+            alt="Product 2"
+            loading="lazy"
+          />
+          <h3>Luxor Italian Leather Sofa Set with Sliding Seats</h3>
+          <p>Starting from 450/day</p>
+          <button type="submit"> <a href="{% url 'sofa2_page' %}">Rent </a></button>
+
+        </div>
+        <div class="product-card">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F241b501f-31af-44d0-a34e-f1c64b45dbfc_2.d26bce582075e85b84fbc64b6562452a.jpeg&f=1&nofb=1&ipt=e31eb1aa265caea601333e4cc80aba067859aab0f26d98d9cd1a7369994aabf4&ipo=images"
+            alt="Product 3"
+            class="style_img__hyfdV"
+            loading="lazy"
+          />
+          <h3>
+            Classic and Traditional Comfortable Linen Fabric Loveseat Sofa
+            Living
+          </h3>
+          <p>Starting from 490/day</p>
+          <button type="submit"> <a href="{% url 'sofa3_page' %}">Rent </a></button>
+
+        </div>
+        <div class="product-card">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.primeclassicdesign.com%2Fimages%2Fleather-living-room-sets%2Fred-leather-sofa-and-loveseat-with-movable-head-cushions-j-nicolo.jpg&f=1&nofb=1&ipt=4f04ffa49ee712d47371dd1ad933de09ccfea3b072bfaf53bc33d4ec267c2196&ipo=images"
+            alt="Product 4"
+            class="style_img__hyfdV"
+            loading="lazy"
+          />
+          <h3>Madrid Contemporary Italian Leather Sofa Set</h3>
+          <p>Starting from 500/day</p>
+          <button type="submit"> <a href="{% url 'sofa4_page' %}">Rent </a></button>
+
+        </div>
+        <div class="product-card">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F61VHHZELhuL._AC_SL1500_.jpg&f=1&nofb=1&ipt=649c6f6a8f1d4c6582a85d9a3763699902213fa78cb80f955df2ed5c6a187edb&ipo=images"
+            alt="Product 5"
+            class="style_img__hyfdV"
+            loading="lazy"
+          />
+          <h3>Convertible Sectional Sofa Set Modern Style</h3>
+          <p>Starting from $40/month</p>
+          <button type="submit"> <a href="{% url 'sofa5_page' %}">Rent </a></button>
+
+        </div>
+        <div class="product-card">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2Fd7cc65f4-059a-45bf-aed3-28eba91cc5d3_2.3055a9eafe3b61082869bc0105e25b83.jpeg&f=1&nofb=1&ipt=4d7ec3a69c544c5d7ef27ce54e8a42eb871581b0259ad95d59b2a1f127b1b061&ipo=images"
+            alt="Product 6"
+            class="style_img__hyfdV"
+            loading="lazy"
+          />
+          <h3>Classic Chesterfield Couch</h3>
+          <p>Starting from 430/day</p>
+          <button type="submit"> <a href="{% url 'sofa6_page' %}">Rent </a></button>
+
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

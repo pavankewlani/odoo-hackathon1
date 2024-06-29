@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furnito</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="logo"><h1>Furnito</h1></div>
+            <div class="nav-2">
+                <form action="">
+                <input type="text" placeholder="Search For Furniture"><i class="ri-search-line"></i>
+            </form>
+            <i class="ri-shopping-cart-line"></i>
+                <a class="ri-user-line" href="{% url 'login_page' %}"></a>
+            </div>
+        </nav>
+        <div class="hero">
+            
+            <div class="left"><h1>Find The Best</h1>
+                <h1> Furniture For You</h1>
+                <h4>“Elegance Redefined: Discover Timeless Furniture for Your Sanctuary of Comfort and Style”</h4>
+                <button><a href="#explore" style="
+                color: black;
+                text-decoration: none;
+                ">Explore</a></button>
+            </div>
+            <div class="right">
+                <img src="https://images.unsplash.com/photo-1613252036716-e1efc9788e5b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnVybml0dXJlfGVufDB8fDB8fHww" alt="">
+            </div>
+        </div>
+        <div id="explore" class="page2">
+            <div class="heading">
+                <h1>Rent furniture & appliances</h1>
+               
+            </div>
+            
+            <div class="container">
+                <div class="slide">
+                
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1635594202056-9ea3b497e5c0?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Bed Room</h2>
+                    <h4>Beds, bedside tables, mattresses, storage, wardrobes, pillows and more</h4>
+                    <button type=""> <a href="{% url 'bedroom_page' %}">Check Out </a></button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1605774337664-7a846e9cdf17?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxpdmluZyUyMHJvb218ZW58MHwwfDB8fHww" alt="">
+                    <h2>Living Room</h2>
+                    <h4>Sofa set, L-shaped sofa, Coffee table, Storage, 3 seater sofa and more</h4>
+                    <button type=""> <a href="{% url 'sofa_page' %}">Check Out </a></button>
+                </div>
+                <div class="card">
+                    <img src="https://plus.unsplash.com/premium_photo-1683141419137-db47132b8df4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRpbmluZyUyMHJvb218ZW58MHwwfDB8fHww" alt="">
+                    <h2>Dining Room</h2>
+                    <h4>4 seater dining set, 6 seater dining set, and more</h4>
+                    <button type=""> <a href="{% url 'dining_page' %}">Check Out </a></button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="promo">
+            <img src="https://www.pngarts.com/files/7/Modern-Furniture-Free-PNG-Image.png" alt="">
+            <h1>Rent Furniture From The Most Trustable Site With Guarentee</h1>
+        </div>
+        <div class="review">
+            <div class="heading">
+                <h1>Our Happy Customers</h1>
+                <h4>Here's what they have to say about their Furnito experience.</h4>
+
+            </div>
+
+            <div class="review-outer">
+                <div class="review-card">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9kZWx8ZW58MHx8MHx8fDA%3D" alt="">
+                    <h3>Emily</h3>
+                    <p>"Great experience, One Of The Best Website I seen In My Life"</p>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9kZWx8ZW58MHx8MHx8fDA%3D" alt="">
+                        <h3>Emily</h3>
+                        <p>"Great experience, One Of The Best Website I seen In My Life"</p>
+                        </div>
+                        <div class="review-card">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9kZWx8ZW58MHx8MHx8fDA%3D" alt="">
+                            <h3>Emily</h3>
+                            <p>"Great experience, One Of The Best Website I seen In My Life"</p>
+                            </div>
+                            <div class="review-card">
+                                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9kZWx8ZW58MHx8MHx8fDA%3D" alt="">
+                                <h3>Emily</h3>
+                                <p>"Great experience, One Of The Best Website I seen In My Life"</p>
+                                </div>
+                                <div class="review-card">
+                                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9kZWx8ZW58MHx8MHx8fDA%3D" alt="">
+                                    <h3>Emily</h3>
+                                    <p>"Great experience, One Of The Best Website I seen In My Life"</p>
+                                    </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="contact">
+                <h1>Need Help</h1>
+                <h2><i class="ri-phone-line"></i> 123-456-789</h2>
+                <h2>Connect With US</h2>
+                <i class="ri-instagram-line"></i>
+                <i class="ri-facebook-box-line"></i>
+                <i class="ri-youtube-line"></i>
+                <i class="ri-twitter-x-line"></i>
+            </div>
+            <div class="newsletter">
+                <h1>Subscribe Our newsletter</h1>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="20c640cb-f92a-4d9f-a014-c347d91d30ef">
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </footer>
+    </main>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
